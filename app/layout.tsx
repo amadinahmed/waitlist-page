@@ -8,9 +8,9 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Shadcn UI Portfolio",
+  title: "Claude Code - AI Accounting Agent",
   description:
-    "A beautiful portfolio template built with Shadcn UI, Tailwind CSS 4, and Next.js 15",
+    "Join the waitlist for Claude Code, an intelligent AI agent that automates bookkeeping, reconciliations, and financial reporting. Transform your accounting workflow with cutting-edge AI.",
 };
 
 export default function RootLayout({

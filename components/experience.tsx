@@ -1,102 +1,92 @@
 import { Badge } from "@/components/ui/badge";
-import { Building2, Calendar } from "lucide-react";
+import {
+  FileText,
+  TrendingUp,
+  Shield,
+  Clock,
+  Receipt,
+  PieChart,
+  type LucideIcon
+} from "lucide-react";
 
-interface ExperienceItemProps {
+interface FeatureItemProps {
+  icon: LucideIcon;
   title: string;
-  company: string;
-  period: string;
   description: string;
-  technologies: string[];
 }
 
-const ExperienceItem = ({
-  title,
-  company,
-  period,
-  description,
-  technologies,
-}: ExperienceItemProps) => {
+const FeatureItem = ({ icon: Icon, title, description }: FeatureItemProps) => {
   return (
-    <div className="relative pl-8 not-last:pb-12">
-      {/* Timeline line */}
-      <div className="absolute left-0 top-2.5 h-full w-[2px] bg-muted group-first:h-[calc(100%-24px)] group-first:top-6">
-        <div className="absolute h-3 w-3 -left-[5px] top-0 rounded-full border-2 border-primary bg-background" />
+    <div className="flex gap-4 p-6 rounded-2xl bg-accent/30 border border-accent/50 hover:bg-accent/50 transition-colors">
+      <div className="flex-shrink-0 h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
+        <Icon className="h-6 w-6 text-primary" />
       </div>
-
-      {/* Content */}
-      <div className="space-y-3">
-        <div className="flex items-center gap-3">
-          <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
-            <Building2 className="size-5 text-muted-foreground" />
-          </div>
-          <span className="text-lg font-semibold">{company}</span>
-        </div>
-        <div>
-          <h3 className="text-xl font-medium">{title}</h3>
-          <div className="flex items-center gap-2 mt-1 text-sm">
-            <Calendar className="size-4" />
-            <span>{period}</span>
-          </div>
-        </div>
-        <p className="text-muted-foreground">{description}</p>
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="rounded-full">
-              {tech}
-            </Badge>
-          ))}
-        </div>
+      <div>
+        <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        <p className="text-muted-foreground text-sm">{description}</p>
       </div>
     </div>
   );
 };
 
-const Experience = () => {
-  const experiences = [
+const Features = () => {
+  const features = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
+      icon: Receipt,
+      title: "Automated Bookkeeping",
       description:
-        "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+        "Automatically categorize transactions, reconcile accounts, and maintain accurate records without manual data entry.",
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Inc",
-      period: "2019 - 2021",
+      icon: FileText,
+      title: "Intelligent Invoicing",
       description:
-        "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-      technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
+        "Generate, send, and track invoices with smart reminders and automated follow-ups for overdue payments.",
     },
     {
-      title: "Frontend Developer",
-      company: "WebTech Studios",
-      period: "2018 - 2019",
+      icon: PieChart,
+      title: "Financial Reporting",
       description:
-        "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-      technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
+        "Get instant P&L statements, balance sheets, and cash flow reports with visual analytics and trend insights.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Tax Optimization",
+      description:
+        "Identify deductions, track expenses by category, and prepare tax-ready reports to maximize your savings.",
+    },
+    {
+      icon: Shield,
+      title: "Compliance & Security",
+      description:
+        "Stay compliant with accounting standards while your data is encrypted and protected with enterprise-grade security.",
+    },
+    {
+      icon: Clock,
+      title: "Time-saving Automation",
+      description:
+        "Reduce hours of manual work to minutes with AI that learns your business patterns and preferences.",
     },
   ];
 
   return (
-    <section id="experience" className="relative py-20 px-6">
-      <div className="max-w-screen-md mx-auto">
+    <section id="features" className="relative py-20 px-6 bg-accent/10">
+      <div className="max-w-screen-lg mx-auto">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
-            Experience
+            Features
           </Badge>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Professional Journey
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Everything You Need to Manage Your Finances
           </h2>
-          <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
-            A timeline of my professional growth and key achievements
+          <p className="text-muted-foreground mt-4 text-lg max-w-2xl mx-auto">
+            Claude Code handles the complexities of accounting so you can focus on growing your business
           </p>
         </div>
 
-        <div className="relative">
-          {experiences.map((experience, index) => (
-            <ExperienceItem key={index} {...experience} />
+        <div className="grid md:grid-cols-2 gap-4">
+          {features.map((feature, index) => (
+            <FeatureItem key={index} {...feature} />
           ))}
         </div>
       </div>
@@ -104,4 +94,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Features;

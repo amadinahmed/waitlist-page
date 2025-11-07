@@ -1,15 +1,15 @@
 import About from "@/components/about";
-import Experience from "@/components/experience";
+import Features from "@/components/experience";
 import Hero from "@/components/hero";
-import Projects from "@/components/projects";
+import Waitlist from "@/components/waitlist";
 
 export default function Home() {
   return (
-    <div className="space-y-10 sm:space-y-16">
+    <div className="space-y-0">
       <Hero />
       <About />
-      <Experience />
-      <Projects />
+      <Features />
+      <Waitlist />
     </div>
   );
 }

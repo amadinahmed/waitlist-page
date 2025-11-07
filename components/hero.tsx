@@ -1,8 +1,7 @@
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { CircleArrowDown, Zap } from "lucide-react";
+import { Calculator, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -18,23 +17,21 @@ const Hero = () => {
       />
       <div className="relative z-[1] text-center max-w-screen-md">
         <Badge className="rounded-full border-none">
-          <Zap className="fill-current" />
-          Fullstack Web Developer
+          <Calculator className="fill-current" />
+          AI-Powered Accounting
         </Badge>
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-          Building Scalable & Engaging Web Experiences
+          Meet Claude Code: Your AI Accounting Agent
         </h1>
         <p className="mt-6 text-[17px] md:text-lg">
-          Hey there! I&apos;m a John Doe, a Full Stack Developer who loves
-          building cool and scalable web experiences. From crafting beautiful
-          frontends to powering robust backends, I bring ideas to life with
-          clean code and great design. Let&apos;s create something amazing
-          together! 🚀
+          Revolutionize your accounting workflow with Claude Code, an intelligent AI agent that automates bookkeeping, reconciliations, and financial reporting. Say goodbye to manual data entry and hello to accurate, efficient accounting powered by cutting-edge AI.
         </p>
         <div className="mt-12 flex items-center justify-center gap-4">
-          <Button size="lg" className="rounded-full text-base">
-            See What I Do <CircleArrowDown className="ml-2 !h-5.5 !w-5.5" />
-          </Button>
+          <a href="#waitlist" className="inline-block">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 rounded-full px-8 text-base">
+              Join the Waitlist <Sparkles className="ml-2 !h-5 !w-5" />
+            </button>
+          </a>
         </div>
       </div>
     </div>

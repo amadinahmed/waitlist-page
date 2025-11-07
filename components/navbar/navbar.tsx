@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { GithubLogo, XLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
@@ -14,20 +13,11 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            className="hidden sm:inline-flex rounded-full shadow-none"
-            size="icon"
-          >
-            <XLogo />
-          </Button>
-          <Button
-            variant="outline"
-            className="rounded-full shadow-none"
-            size="icon"
-          >
-            <GithubLogo className="h-5! w-5!" />
-          </Button>
+          <a href="#waitlist" className="hidden sm:block">
+            <Button className="rounded-full shadow-none">
+              Join Waitlist
+            </Button>
+          </a>
 
           {/* Mobile Menu */}
           <div className="md:hidden">

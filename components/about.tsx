@@ -1,44 +1,50 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Download } from "lucide-react";
-import Image from "next/image";
-import { HTMLAttributes } from "react";
-import { GithubLogo } from "./icons";
+import { Bot, Brain, Zap } from "lucide-react";
 
 const About = () => {
   return (
     <section id="about" className="relative py-20 px-6">
       <div className="max-w-screen-md mx-auto">
-        <div className="flex flex-col md:flex-row-reverse gap-12">
-          <ProfileImage className="hidden md:block" />
+        <div className="text-center">
+          <Badge variant="secondary" className="mb-4">
+            How It Works
+          </Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+            Intelligent Accounting, Automated
+          </h2>
+          <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Claude Code combines advanced AI with deep accounting expertise to handle your financial tasks with precision and speed. Built on cutting-edge language models, it understands context, learns from your business, and adapts to your needs.
+          </p>
 
-          {/* Content */}
-          <div className="flex-1 md:text-left">
-            <Badge variant="secondary" className="mb-4">
-              About Me
-            </Badge>
-            <ProfileImage className="mt-3 mb-8 block md:hidden" />
-            <h2 className="text-4xl font-bold mb-4 tracking-tight">
-              Passionate about creating impactful web experiences
-            </h2>
-            <p className="text-muted-foreground mb-6 text-justify">
-              With over 5 years of experience in full-stack development, I
-              specialize in building scalable web applications using modern
-              technologies. My expertise includes React, Node.js, and cloud
-              architecture. I&apos;m passionate about creating elegant solutions
-              to complex problems and sharing knowledge with the developer
-              community.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-start">
-              <Button className="rounded-full">
-                <GithubLogo />
-                View Github
-              </Button>
-              <Button variant="outline" className="rounded-full">
-                <Download />
-                Download CV
-              </Button>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                <Brain className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Smart Processing</h3>
+              <p className="text-muted-foreground text-sm">
+                Advanced AI understands your transactions, categorizes expenses, and detects anomalies automatically.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                <Zap className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Real-time Insights</h3>
+              <p className="text-muted-foreground text-sm">
+                Get instant financial reports, cash flow analysis, and actionable insights whenever you need them.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                <Bot className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
+              <p className="text-muted-foreground text-sm">
+                Your AI accounting agent never sleeps, handling tasks and answering questions around the clock.
+              </p>
             </div>
           </div>
         </div>
@@ -47,14 +53,4 @@ const About = () => {
   );
 };
 
-const ProfileImage = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
-    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-      <Image src="/placeholder.svg" alt="" className="object-cover" fill />
-    </div>
-  </div>
-);
 export default About;
