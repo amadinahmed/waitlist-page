@@ -8,9 +8,9 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Claude Code - AI Accounting Agent",
+  title: "Carlo - AI Accounting Agent",
   description:
-    "Join the waitlist for Claude Code, an intelligent AI agent that automates bookkeeping, reconciliations, and financial reporting. Transform your accounting workflow with cutting-edge AI.",
+    "Join the waitlist for Carlo, an intelligent AI agent that automates bookkeeping, reconciliations, and financial reporting. Transform your accounting workflow with cutting-edge AI.",
 };
 
 export default function RootLayout({

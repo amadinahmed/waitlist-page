@@ -5,6 +5,6 @@ export const Logo = () => (
     <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center">
       <Calculator className="h-5 w-5 text-primary" />
     </div>
-    <span className="font-semibold text-lg">Claude Code</span>
+    <span className="font-semibold text-lg">Carlo</span>
   </div>
 );

@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
               <Calculator className="h-6 w-6 text-primary" />
             </div>
-            <span className="font-semibold text-xl">Claude Code</span>
+            <span className="font-semibold text-xl">Carlo</span>
           </div>
 
           <ul className="mt-6 flex items-center gap-4 flex-wrap">
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="py-6 flex flex-col items-center justify-center gap-2 px-6 xl:px-0">
           {/* Copyright */}
           <span className="text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} Claude Code. All rights reserved.
+            &copy; {new Date().getFullYear()} Carlo. All rights reserved.
           </span>
           <span className="text-muted-foreground text-xs">
             AI-Powered Accounting Agent
