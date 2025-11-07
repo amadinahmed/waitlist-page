@@ -5,16 +5,16 @@ import { NavigationSheet } from "./navigation-sheet";
 
 const Navbar = () => {
   return (
-    <nav className="fixed z-50 top-6 inset-x-4 h-16 bg-background/80 backdrop-blur-lg border border-border/40 shadow-lg shadow-black/5 max-w-screen-md mx-auto rounded-full transition-all">
-      <div className="h-full flex items-center justify-between mx-auto px-4">
+    <nav className="fixed z-50 top-0 inset-x-0 h-16 bg-background/80 backdrop-blur-md border-b border-border">
+      <div className="h-full flex items-center justify-between max-w-7xl mx-auto px-6">
         <Logo />
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:block" />
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <a href="#waitlist" className="hidden sm:block">
-            <Button className="rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all">
+            <Button className="rounded-lg h-9">
               Join Waitlist
             </Button>
           </a>
